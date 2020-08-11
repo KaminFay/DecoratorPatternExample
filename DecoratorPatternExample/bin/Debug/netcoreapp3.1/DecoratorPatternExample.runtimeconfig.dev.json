@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Kamin\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Kamin\\.nuget\\packages"
+      "/Users/kamin/.dotnet/store/|arch|/|tfm|",
+      "/Users/kamin/.nuget/packages"
     ]
   }
 }

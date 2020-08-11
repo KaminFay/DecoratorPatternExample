@@ -1,6 +1,6 @@
 ﻿namespace DecoratorPatternExample
 {
-    public class CarTires : CarDecorator
+    public class CarTires : VehicleDecorator
     {
         public CarTires(Vehicle vehicle) : base(vehicle)
         {
