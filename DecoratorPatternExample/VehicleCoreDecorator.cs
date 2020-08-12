@@ -1,10 +1,10 @@
-﻿namespace DecoratorPatternExample
+namespace DecoratorPatternExample
 {
-    public abstract class VehicleDecorator : Vehicle
+    public class VehicleCoreDecorator : Vehicle 
     {
         private Vehicle baseVehicle;
 
-        public VehicleDecorator(Vehicle baseVehicle)
+        public VehicleCoreDecorator(Vehicle baseVehicle)
         {
             this.baseVehicle = baseVehicle;
         }

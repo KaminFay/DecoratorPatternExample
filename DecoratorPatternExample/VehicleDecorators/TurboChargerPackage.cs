@@ -1,6 +1,6 @@
 namespace DecoratorPatternExample
 {
-    public class TurboChargerPackage : VehicleDecorator
+    public class TurboChargerPackage : VehicleCoreDecorator
     {
         public TurboChargerPackage(Vehicle baseVehicle) : base(baseVehicle)
         {

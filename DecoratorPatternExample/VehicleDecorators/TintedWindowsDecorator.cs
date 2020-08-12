@@ -1,6 +1,6 @@
 namespace DecoratorPatternExample
 {
-    public class TintedWindowsDecorators : VehicleDecorator
+    public class TintedWindowsDecorators : VehicleCoreDecorator
     {
         public TintedWindowsDecorators(Vehicle baseVehicle) : base(baseVehicle)
         {

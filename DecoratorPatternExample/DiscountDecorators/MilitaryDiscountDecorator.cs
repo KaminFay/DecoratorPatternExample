@@ -1,8 +1,8 @@
 namespace DecoratorPatternExample.DiscountDecorators
 {
-    public class MilitaryDiscoundDecorator : VehicleDecorator
+    public class MilitaryDiscountDecorator : VehicleCoreDecorator
     {
-        public MilitaryDiscoundDecorator(Vehicle baseVehicle) : base(baseVehicle)
+        public MilitaryDiscountDecorator(Vehicle baseVehicle) : base(baseVehicle)
         {
         }
 

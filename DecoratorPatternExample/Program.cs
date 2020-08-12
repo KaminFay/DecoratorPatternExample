@@ -1,5 +1,6 @@
 ﻿using System;
 using DecoratorPatternExample.DiscountDecorators;
+using DecoratorPatternExample.Motercycle;
 
 namespace DecoratorPatternExample
 {
@@ -7,7 +8,7 @@ namespace DecoratorPatternExample
     {
         static void Main(string[] args)
         {
-            Vehicle v1 = new CarTires(new CarImp());
+            Vehicle v1 = new TirePackageDecorator(new CarImp());
             Console.WriteLine(v1.PackageDescription());
             Console.WriteLine(v1.Cost());
             Vehicle v2 = new TintedWindowsDecorators(new TruckImp());
@@ -27,6 +28,16 @@ namespace DecoratorPatternExample
             Console.WriteLine("Here is the cost: " + v4.Cost());
             v4 = new BodyPackageDecorator(new BodyColorDecorator(v4, "red"));
             Console.WriteLine("Here is the cost after the added things from above: " + v4.Cost());
+
+            Vehicle v5 = new TirePackageDecorator(new CycleImp());
+            Vehicle v6 = new TirePackageDecorator(new CarImp());
+
+            Console.WriteLine("Upgraded tire package on motorcycle: ");
+            Console.WriteLine(v5.PackageDescription());
+            Console.WriteLine(v5.Cost());
+            Console.WriteLine("Upgraded tire package on car: ");
+            Console.WriteLine(v6.PackageDescription());
+            Console.WriteLine(v6.Cost());
         }
     }
 }

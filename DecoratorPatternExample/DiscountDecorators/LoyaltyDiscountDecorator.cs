@@ -1,6 +1,6 @@
 namespace DecoratorPatternExample.DiscountDecorators
 {
-    public class LoyaltyDiscountDecorator : VehicleDecorator
+    public class LoyaltyDiscountDecorator : VehicleCoreDecorator
     {
         public LoyaltyDiscountDecorator(Vehicle baseVehicle) : base(baseVehicle)
         {

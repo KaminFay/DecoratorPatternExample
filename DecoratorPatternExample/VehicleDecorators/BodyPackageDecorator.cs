@@ -1,6 +1,6 @@
 namespace DecoratorPatternExample
 {
-    public class BodyPackageDecorator : VehicleDecorator
+    public class BodyPackageDecorator : VehicleCoreDecorator
     {
         public BodyPackageDecorator(Vehicle baseVehicle) : base(baseVehicle)
         {

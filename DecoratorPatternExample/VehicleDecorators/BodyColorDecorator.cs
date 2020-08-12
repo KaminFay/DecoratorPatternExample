@@ -1,11 +1,21 @@
+using System.Collections.Generic;
+
 namespace DecoratorPatternExample
 {
-    public class BodyColorDecorator : VehicleDecorator
+    public class BodyColorDecorator : VehicleCoreDecorator
     {
         private string color;
+        private List<string> colorOptions = new List<string>{"red", "blue", "white"};
         public BodyColorDecorator(Vehicle baseVehicle, string color) : base(baseVehicle)
         {
-            this.color = color;
+            if (colorOptions.Contains(color))
+            {
+                this.color = color;
+            }
+            else
+            {
+                this.color = "black";
+            }
         }
 
         public override int Cost()
@@ -18,9 +28,9 @@ namespace DecoratorPatternExample
                     return base.Cost() + 600;
                 case "white":
                     return base.Cost() + 700;
+                default:
+                    return base.Cost();
             }
-
-            return base.Cost();
         }
 
         public override string PackageDescription()
